@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import TypingText from "./Typingtext";
+
+
+const isLoggedIn = false;
 
 export default function Hero() {
   return (
@@ -17,8 +21,8 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex gap-4">
-          <Button className="px-6 py-3">LEARN MORE</Button>
-          <Button className="px-6 py-3">PROFILE</Button>
+          <Button as={Link} to="/events" className="px-6 py-3">LEARN MORE</Button>
+          <Button as={Link} to={isLoggedIn ? "/profile" : "/portfolio"} className="px-6 py-3">{isLoggedIn ? "PROFILE" : "JOIN"}</Button>
         </div>
 
         <span className="mt-4 inline-block -rotate-2 rounded bg-black px-2 py-1 text-[10px] font-bold text-white">

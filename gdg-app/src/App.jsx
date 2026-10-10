@@ -7,7 +7,6 @@ import TeamPage from "./pages/TeamPage";
 import EventsPage from "./pages/EventsPage";
 import GalleryPage from "./pages/GalleryPage";
 import PortfolioPage from "./pages/PortfolioPage";
-import MorePage from "./pages/MorePage";
 import Footer from "./components/Footer";
 
 const pageNames = {
@@ -16,7 +15,6 @@ const pageNames = {
   "/events": "Events",
   "/gallery": "Gallery",
   "/portfolio": "Portfolio",
-  "/more": "More",
 };
 
 export default function App() {
@@ -48,7 +46,6 @@ export default function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/more" element={<MorePage />} />
         
       </Routes>
       )}

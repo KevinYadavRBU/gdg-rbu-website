@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import Button from "./Button";
+import MoreMenu from "./MoreMenu";
 import logo from "../assets/gdg_logo.png";
 
 const links = [
@@ -8,7 +9,6 @@ const links = [
   { label: "Events", to: "/events", color: "yellow" },
   { label: "Gallery", to: "/gallery", color: "green" },
   { label: "Portfolio", to: "/portfolio", color: "purple" },
-  { label: "More", to: "/more", color: "blue" },
 ];
 
 export default function Navbar() {
@@ -33,17 +33,12 @@ export default function Navbar() {
             )}
           </NavLink>
         ))}
+        <MoreMenu />
       </div>
 
-      <div className="flex items-center gap-2 text-sm font-medium">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gdg-purple text-xs font-bold text-white">
-          KY
-        </div>
-        <span className="hidden sm:inline">Kevin Yadav</span>
-        <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-          <path d="M6 9l6 6 6-6" />
-        </svg>
-      </div>
+      <Button as={Link} to="/portfolio" color="black">
+        Join Us
+      </Button>
     </nav>
   );
 }

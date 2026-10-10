@@ -13,6 +13,7 @@
 
   --font-pixel: "Jersey 25", monospace;
   --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
 }
 
 @layer base {
