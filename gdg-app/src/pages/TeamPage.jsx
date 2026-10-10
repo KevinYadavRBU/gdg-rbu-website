@@ -16,14 +16,14 @@ export default function TeamPage() {
   const [active, setActive] = useState(null);
 
   return (
-    <main>
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2">
-        <div>
-          <h1 className="font-pixel text-6xl leading-[0.9] md:text-8xl">
+    <main className="overflow-x-hidden text-ink">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:grid-cols-2">
+        <div className="min-w-0">
+          <h1 className="font-pixel text-5xl leading-[0.9] sm:text-6xl md:text-8xl">
             Meet our team.
           </h1>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-3 sm:gap-4">
             {domains.map((domain) => (
               <button
                 key={domain}
@@ -32,8 +32,8 @@ export default function TeamPage() {
                 onClick={() =>
                   setActive((prev) => (prev === domain ? null : domain))
                 }
-                className={`cursor-pointer border-[3px] border-black px-6 py-3 text-sm font-bold shadow-brutal-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${
-                  active === domain ? "bg-black text-white" : "bg-white"
+                className={`min-h-[40px] cursor-pointer border-[3px] border-ink px-3 py-2 text-sm font-bold shadow-brutal-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none sm:px-6 sm:py-3 ${
+                  active === domain ? "bg-ink text-surface" : "bg-surface text-ink"
                 }`}
               >
                 {domain}
@@ -45,11 +45,11 @@ export default function TeamPage() {
         <img
           src={teamPhoto}
           alt="GDG RBU team group photo"
-          className="w-full border-4 border-black object-cover shadow-[8px_8px_0_0_#000]"
+          className="w-full max-w-full border-4 border-ink object-cover shadow-[8px_8px_0_0_var(--color-ink)]"
         />
       </section>
 
-      <hr className="border-t-4 border-black" />
+      <hr className="border-t-4 border-ink" />
     </main>
   );
 }

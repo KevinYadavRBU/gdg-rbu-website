@@ -1,19 +1,33 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  --color-ink: #000000;
+  --color-surface: #ffffff;
+  --color-surface-alt: #fdfcf8;
+  --color-gdg-bg: #f8f9fa;
   --color-gdg-blue: #4285f4;
   --color-gdg-red: #ea4335;
   --color-gdg-yellow: #fbbc04;
   --color-gdg-green: #34a853;
   --color-gdg-purple: #6c6cff;
-  --color-gdg-bg: #f8f9fa;
-
-  --shadow-brutal: 4px 4px 0 0 #000;
-  --shadow-brutal-sm: 2px 2px 0 0 #000;
 
   --font-pixel: "Jersey 25", monospace;
   --font-body: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
+}
+
+@theme inline {
+  --shadow-brutal: 4px 4px 0 0 var(--color-ink);
+  --shadow-brutal-sm: 2px 2px 0 0 var(--color-ink);
+}
+
+.dark {
+  --color-ink: #f5f4f0;
+  --color-surface: #1a1a1a;
+  --color-surface-alt: #242424;
+  --color-gdg-bg: #111111;
 }
 
 @layer base {
@@ -24,8 +38,16 @@
       linear-gradient(to right, rgb(0 0 0 / 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgb(0 0 0 / 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
+    color: var(--color-ink);
+    transition-property: color, background-color, border-color;
+    transition-duration: 300ms;
   }
-   h1,
+  .dark body {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  }
+  h1,
   h2,
   h3 {
     font-weight: 700;

@@ -26,8 +26,8 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16">
-      <h2 className="text-center font-pixel text-4xl md:text-5xl">FAQs</h2>
+    <section className="mx-auto max-w-3xl overflow-x-hidden px-4 py-12 text-ink sm:px-6 sm:py-16">
+      <h2 className="text-center font-pixel text-3xl sm:text-4xl md:text-5xl">FAQs</h2>
 
       <div className="mt-10 space-y-5">
         {faqs.map((faq) => (

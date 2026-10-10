@@ -5,7 +5,7 @@ import FAQSection from "../components/FAQSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden text-ink">
       <Hero />
       <EventsSection />
       <TeamSection />

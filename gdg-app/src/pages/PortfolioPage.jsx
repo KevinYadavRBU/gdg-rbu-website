@@ -53,15 +53,15 @@ export default function PortfolioPage() {
   };
 
   return (
-    <main className="relative flex min-h-[80vh] items-center justify-center overflow-hidden px-6 py-16">
-      <img src={leftShapes} alt="" className="absolute bottom-10 left-10 hidden w-40 lg:block" />
-      <img src={rightShapes} alt="" className="absolute right-10 top-10 hidden w-44 lg:block" />
+    <main className="relative flex min-h-[80vh] items-center justify-center overflow-x-hidden px-4 py-12 text-ink sm:px-6 sm:py-16">
+      <img src={leftShapes} alt="" className="absolute bottom-10 left-10 hidden w-40 dark:opacity-90 lg:block" />
+      <img src={rightShapes} alt="" className="absolute right-10 top-10 hidden w-44 dark:opacity-90 lg:block" />
 
-      <div className="relative w-full max-w-md">
+      <div className="relative w-full max-w-md min-w-0">
         {/* Card */}
         <form
           onSubmit={handleSubmit}
-          className="border-[3px] border-black bg-gdg-purple p-8 shadow-[12px_12px_0_0_#000]"
+          className="border-[3px] border-ink bg-gdg-purple p-6 text-black shadow-[12px_12px_0_0_var(--color-ink)] sm:p-8"
         >
           <h1 className="flex items-center gap-3 text-3xl font-extrabold uppercase">
             <svg {...iconProps} className="h-6 w-6">
@@ -69,11 +69,11 @@ export default function PortfolioPage() {
             </svg>
             {isLogin ? "Login" : "Sign up"}
           </h1>
-          <p className="mt-3 text-sm text-white">
+          <p className="mt-3 text-sm text-black">
             {isLogin ? "Welcome back !" : "Join GDG RBU !"}
           </p>
 
-          <hr className="my-6 border-t border-black" />
+          <hr className="my-6 border-t border-ink" />
 
           <div className="space-y-5">
             {!isLogin && (
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
-                  className="cursor-pointer"
+                  className="flex min-h-[40px] min-w-[40px] cursor-pointer items-center justify-center"
                 >
                   <EyeIcon />
                 </button>
@@ -101,10 +101,10 @@ export default function PortfolioPage() {
           </div>
 
           {/* Submit + social */}
-          <div className="mt-8 flex items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <button
               type="submit"
-              className="flex cursor-pointer items-center gap-8 bg-black px-6 py-4 font-bold text-white shadow-[4px_4px_0_0_#ea4335] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+              className="flex min-h-[40px] cursor-pointer items-center gap-8 border-2 border-ink bg-ink px-6 py-4 font-bold text-surface shadow-[4px_4px_0_0_#ea4335] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
             >
               {isLogin ? "Login" : "Sign up"}
               <svg {...iconProps} className="h-6 w-6">
@@ -117,15 +117,15 @@ export default function PortfolioPage() {
 
             <button
               type="button"
-              aria-label="Continue with GitHub"
-              className="flex h-12 w-12 cursor-pointer items-center justify-center border-2 border-black bg-white"
+              aria-label="Continue with Google"
+              className="flex h-12 w-12 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink [&>img]:dark:invert"
             >
               <img src={googleIcon} alt="" className="h-6 w-6" />
             </button>
             <button
               type="button"
-              aria-label="Continue with Google"
-              className="flex h-12 w-12 cursor-pointer items-center justify-center border-2 border-black bg-white"
+              aria-label="Continue with GitHub"
+              className="flex h-12 w-12 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink [&>img]:dark:invert"
             >
               <img src={githubIcon} alt="" className="h-6 w-6" />
             </button>
@@ -137,7 +137,7 @@ export default function PortfolioPage() {
           <button
             type="button"
             onClick={() => setMode(isLogin ? "signup" : "login")}
-            className="cursor-pointer bg-black px-8 py-4 text-xl font-bold text-white shadow-[4px_4px_0_0_#4285f4] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+            className="min-h-[40px] cursor-pointer border-2 border-ink bg-ink px-8 py-4 text-xl font-bold text-surface shadow-[4px_4px_0_0_#4285f4] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
           >
             {isLogin ? "sign up" : "log in"}
           </button>

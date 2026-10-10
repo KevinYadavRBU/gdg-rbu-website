@@ -14,12 +14,12 @@ const features = [
 
 export default function TeamSection() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16">
-      <Card className="overflow-hidden bg-[#fdfcf8]">
+    <section className="mx-auto max-w-6xl overflow-x-hidden px-4 py-12 text-ink sm:px-6 sm:py-16">
+      <Card className="overflow-hidden bg-surface-alt">
         <div className="grid md:grid-cols-2">
           {/* Left: text */}
-          <div className="p-8 md:p-12">
-            <h2 className="font-pixel text-4xl leading-tight md:text-5xl">
+          <div className="min-w-0 p-6 sm:p-8 md:p-12">
+            <h2 className="font-pixel text-3xl leading-tight sm:text-4xl md:text-5xl">
               Meet the Google Developer Group Team
             </h2>
 
@@ -43,7 +43,7 @@ export default function TeamSection() {
                     <circle cx="12" cy="12" r="9" />
                     <path d="M8 12l3 3 5-6" />
                   </svg>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-sm font-bold">{item.title}</h3>
                     <p className="mt-1 text-xs leading-5">{item.text}</p>
                   </div>

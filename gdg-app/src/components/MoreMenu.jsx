@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
-const items = [
+/* eslint-disable-next-line react-refresh/only-export-components -- shared with MobileMenu */
+export const items = [
   { label: "Recruitment", href: "/events", bg: "bg-gdg-red" },
   { label: "Docs", href: "https://www.gdgrbu.app/docs", bg: "bg-gdg-yellow" },
   { label: "Blogs", href: "https://www.gdgrbu.app/blogs", bg: "bg-gdg-green" },
@@ -45,9 +46,9 @@ export default function MoreMenu() {
       </Button>
 
       {open && (
-        <div className="absolute left-0 top-full z-50 mt-2 w-56 space-y-4 rounded-xl border border-slate-300 bg-[#fdfcf8] p-4 shadow-lg">
+        <div className="absolute left-0 top-full z-50 mt-2 w-56 space-y-4 rounded-xl border border-ink bg-surface-alt p-4 text-ink shadow-lg">
           {items.map((item) => {
-            const className = `block w-full rounded-lg border-[3px] border-black px-4 py-2 text-left text-sm font-bold shadow-brutal-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${item.bg}`;
+            const className = `block w-full rounded-lg border-[3px] border-ink px-4 py-2 text-left text-sm font-bold text-black shadow-brutal-sm transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none ${item.bg}`;
             return item.href.startsWith("/") ? (
               <Link
                 key={item.label}

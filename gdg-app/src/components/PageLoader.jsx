@@ -13,8 +13,8 @@ export default function PageLoader({ name = "Page" }) {
   }, []);
 
   return (
-    <main className="flex min-h-[60vh] items-center justify-center">
-      <p className="rounded-none border-[3px] border-black bg-gdg-bg px-6 py-3 font-bold shadow-brutal-sm">
+    <main className="flex min-h-[60vh] items-center justify-center px-4 text-ink">
+      <p className="rounded-none border-[3px] border-ink bg-gdg-bg px-6 py-3 font-bold shadow-brutal-sm">
         Loading-{name}
         {dots[step]}
       </p>
