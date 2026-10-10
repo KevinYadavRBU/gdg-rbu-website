@@ -10,7 +10,7 @@ The design is neo-brutalist: thick black borders, hard offset shadows, bright Go
 | --- | --- | --- |
 | Convert the Figma design into a React website | Done | Home and Events pages are complete. Team and Gallery have their top sections built. The login screen is built as UI only |
 | Responsive on mobile, tablet and desktop | Done | Mobile-first layouts with `sm`, `md` and `lg` breakpoints, and a hamburger menu below 768px |
-| Deploy on Vercel | Not yet | See [Deployment](#deployment) |
+| Deploy on Vercel | Done | See [Deployment](gdg-rbu-website-five.vercel.app) |
 | Well-structured GitHub repository with documentation | Done | This README, a clear folder structure and setup steps |
 | Dark / Light mode | Done | Navbar toggle, class-based dark mode, see [Dark and light mode](#dark-and-light-mode) |
 | Smooth animations and transitions | Done | See [Animations](#animations) |
